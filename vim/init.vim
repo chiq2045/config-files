@@ -23,8 +23,8 @@ Plug 'ghifarit53/tokyonight-vim'
 "" File Explorer + git
 Plug 'tpope/vim-commentary'
 Plug 'scrooloose/nerdtree' |
-			\ Plug 'xuyuanp/nerdtree-git-plugin' |
-			\ Plug 'ryanoasis/vim-devicons'
+			\ Plug 'xuyuanp/nerdtree-git-plugin'
+			" \ Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 """ NERDTree git plugin (((
@@ -236,3 +236,8 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 """ )))
+
+set ts=2
+set sw=0
+set sts=2
+set expandtab
