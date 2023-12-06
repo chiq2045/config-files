@@ -26,14 +26,6 @@ require('packer').startup(function(use)
     },
   }
 
-  use { -- ReScript
-    'rescript-lang/rescript-vscode',
-    requires = {
-      'rescript-lang/vim-rescript',
-      'nkrkv/nvim-treesitter-rescript'
-    }
-  }
-
   use { -- File Explorer
     'nvim-tree/nvim-tree.lua',
     requires = {
@@ -324,7 +316,7 @@ prettier.setup({
 -- See `:help nvim-treesitter`
 require('nvim-treesitter.configs').setup {
   -- Add languages to be installed here that you want installed for treesitter
-  ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'typescript', 'rescript', 'help', 'vim' },
+  ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'typescript', 'help', 'vim', 'c_sharp' },
 
   highlight = { enable = true },
   indent = { enable = true, disable = { 'python' } },
@@ -457,19 +449,13 @@ local servers = {
   cssls = {},
   html = {},
   eslint = {},
-  rescriptls = {
-    cmd = {
-      'node',
-      '~/.local/share/nvim/site/pack/packer/start/vim-rescript/server/out/server.js',
-      '--stdio'
-    }
-  },
   lua_ls = {
     Lua = {
       workspace = { checkThirdParty = false },
       telemetry = { enable = false },
     },
   },
+  csharp_ls = {}
 }
 
 -- Setup neovim lua configuration
